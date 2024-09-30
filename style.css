@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.buttons {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    margin-bottom: 20px; /* 按鈕容器距離卡片的距離 */
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF; /* 藍色邊框 */
+    border-radius: 5px; /* 圓角 */
+    background-color: #fff; /* 背景顏色 */
+    color: #333; /* 字體顏色 */
+    cursor: pointer; /* 鼠標樣式 */
+    transition: border-color 0.3s; /* 邊框顏色變化 */
+}
+
+select:hover {
+    border-color: #0056b3; /* 懸停時的邊框顏色 */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px; /* 按鈕間距 */
+    cursor: pointer;
+    background-color: #007BFF; /* 按鈕背景顏色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none; /* 去除邊框 */
+    border-radius: 5px; /* 圓角 */
+    transition: background-color 0.3s; /* 背景顏色變化 */
+}
+
+.buttons button:hover {
+    background-color: #0056b3; /* 按鈕懸停顏色 */
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4列布局 */
+    gap: 15px; /* 卡片間的間隔 */
+}
+
+.card {
+    width: 150px; /* 卡片寬度 */
+    height: 150px; /* 卡片高度 */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-face img {
+    width: 100%; /* 圖片寬度100%適應卡片 */
+    height: 100%; /* 圖片高度100%適應卡片 */
+    object-fit: cover; /* 圖片適應容器，保持比例 */
+}
+
+.front {
+    background-color: #fff;
+}
+
+.back {
+    background-color: #ddd;
+    transform: rotateY(180deg);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}

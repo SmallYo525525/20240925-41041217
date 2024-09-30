@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記憶大考驗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 兩個按鈕和下拉選單 -->
+  <div class="buttons">
+    <select id="imageType" onchange="changeImageType()">
+      <option value="動物">動物</option>
+      <option value="恐龍">恐龍</option>
+    </select>
+    <button onclick="startGame()">開始遊戲</button>
+    <button onclick="flipAllToBack()">全部翻到背面</button>
+    <button onclick="flipAllToFront()">全部翻到正面</button>
+  </div>
+
+  <!-- 卡片容器 -->
+  <div class="cards-container" id="cards-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
